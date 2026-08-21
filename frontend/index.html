@@ -3,442 +3,1186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Aeterna | Premium Men's Watches</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+  <!-- ==================== LOADER ==================== -->
+
   <div class="loader" id="loader">
     <div class="loader-watch">
       <div class="loader-hand loader-hour"></div>
       <div class="loader-hand loader-minute"></div>
       <div class="loader-center"></div>
     </div>
+
     <div class="loader-text">Aeterna</div>
   </div>
 
+
+  <!-- ==================== NAVBAR ==================== -->
+
   <nav class="navbar" id="navbar">
-    <a href="#" class="nav-brand"><span class="nav-brand-icon">&#9670;</span> Aeterna</a>
+
+    <a href="#" class="nav-brand">
+      <span class="nav-brand-icon">&#9670;</span>
+      Aeterna
+    </a>
+
     <div class="nav-links">
       <a href="#collection">Collection</a>
       <a href="#features">Craftsmanship</a>
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </div>
-    <button class="nav-cta" onclick="openChat()"><span>AI Concierge</span></button>
-    <button class="nav-mobile-toggle" onclick="toggleMobileMenu()">&#9776;</button>
+
+    <button class="nav-cta" onclick="openChat()">
+      <span>AI Concierge</span>
+    </button>
+
+    <button
+      class="nav-mobile-toggle"
+      onclick="toggleMobileMenu()"
+      aria-label="Open menu"
+    >
+      &#9776;
+    </button>
+
   </nav>
 
+
+  <!-- ==================== MOBILE MENU ==================== -->
+
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#collection" onclick="toggleMobileMenu()">Collection</a>
-    <a href="#features" onclick="toggleMobileMenu()">Craftsmanship</a>
-    <a href="#about" onclick="toggleMobileMenu()">About</a>
-    <a href="#contact" onclick="toggleMobileMenu()">Contact</a>
-    <button onclick="openChat(); toggleMobileMenu();">AI Concierge</button>
+
+    <a href="#collection" onclick="toggleMobileMenu()">
+      Collection
+    </a>
+
+    <a href="#features" onclick="toggleMobileMenu()">
+      Craftsmanship
+    </a>
+
+    <a href="#about" onclick="toggleMobileMenu()">
+      About
+    </a>
+
+    <a href="#contact" onclick="toggleMobileMenu()">
+      Contact
+    </a>
+
+    <button onclick="openChat(); toggleMobileMenu();">
+      AI Concierge
+    </button>
+
   </div>
+
+
+  <!-- ==================== HERO ==================== -->
 
   <section class="hero" id="hero">
+
     <div class="hero-particles" id="particles"></div>
+
     <div class="hero-content">
-      <div class="hero-label">Est. 2024</div>
+
+      <div class="hero-label">
+        Est. 2024
+      </div>
+
       <h1 class="brand-name">
-        <span class="brand-char">A</span><span class="brand-char">e</span><span class="brand-char">t</span><span class="brand-char">e</span><span class="brand-char">r</span><span class="brand-char">n</span><span class="brand-char">a</span>
+
+        <span class="brand-char">A</span>
+        <span class="brand-char">e</span>
+        <span class="brand-char">t</span>
+        <span class="brand-char">e</span>
+        <span class="brand-char">r</span>
+        <span class="brand-char">n</span>
+        <span class="brand-char">a</span>
+
       </h1>
-      <p class="tagline">Timeless Precision. Modern Elegance.</p>
-      <p class="hero-desc">Premium men's watches crafted for the distinguished gentleman. Where heritage meets contemporary design.</p>
+
+      <p class="tagline">
+        Timeless Precision. Modern Elegance.
+      </p>
+
+      <p class="hero-desc">
+        Premium men's watches crafted for the distinguished gentleman.
+        Where heritage meets contemporary design.
+      </p>
+
       <div class="hero-cta-group">
-        <button class="cta-button primary" onclick="scrollToCollection()">
+
+        <button
+          class="cta-button primary"
+          onclick="scrollToCollection()"
+        >
+
           <span>Explore Collection</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M7 17L17 7M17 7H7M17 7V17"/>
+          </svg>
+
         </button>
-        <button class="cta-button secondary" onclick="openChat()"><span>Ask AI Expert</span></button>
+
+
+        <button
+          class="cta-button secondary"
+          onclick="openChat()"
+        >
+          <span>Ask AI Expert</span>
+        </button>
+
       </div>
+
     </div>
-    <div class="hero-watch-showcase">
-      <div class="hero-watch-float" id="heroWatch">
-        <img src="images/watch1.png" alt="Aeterna Premium Watch" class="hero-watch-img">
-        <div class="hero-watch-glow"></div>
+
+
+    <!--
+      HERO WATCH REMOVED
+      The large watch image that previously appeared
+      on the right side of the hero section has been removed.
+    -->
+
+
+    <div
+      class="scroll-indicator"
+      onclick="scrollToCollection()"
+    >
+
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
       </div>
-    </div>
-    <div class="scroll-indicator" onclick="scrollToCollection()">
-      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+
       <span>Scroll to explore</span>
+
     </div>
+
   </section>
+
+
+  <!-- ==================== FEATURES ==================== -->
 
   <section class="features" id="features">
+
     <div class="section-header">
-      <span class="section-label">Why Aeterna</span>
-      <h2>Crafted to Perfection</h2>
-      <p>Every timepiece is a masterpiece of engineering and design</p>
+
+      <span class="section-label">
+        Why Aeterna
+      </span>
+
+      <h2>
+        Crafted to Perfection
+      </h2>
+
+      <p>
+        Every timepiece is a masterpiece of engineering and design
+      </p>
+
     </div>
+
+
     <div class="features-grid">
+
+
+      <!-- FEATURE 1 -->
+
       <div class="feature-card">
+
         <div class="feature-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 6v6l4 2"/>
+          </svg>
+
         </div>
-        <h4>Precision Movement</h4>
-        <p>Japanese quartz movement ensuring accuracy within seconds per month</p>
+
+        <h4>
+          Precision Movement
+        </h4>
+
+        <p>
+          Japanese quartz movement ensuring accuracy within seconds per month
+        </p>
+
       </div>
+
+
+      <!-- FEATURE 2 -->
+
       <div class="feature-card">
+
         <div class="feature-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+            <path d="M2 17l10 5 10-5"/>
+            <path d="M2 12l10 5 10-5"/>
+          </svg>
+
         </div>
-        <h4>Sapphire Crystal</h4>
-        <p>Hardened mineral crystal with anti-reflective coating for clarity</p>
+
+        <h4>
+          Sapphire Crystal
+        </h4>
+
+        <p>
+          Hardened mineral crystal with anti-reflective coating for clarity
+        </p>
+
       </div>
+
+
+      <!-- FEATURE 3 -->
+
       <div class="feature-card">
+
         <div class="feature-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+          </svg>
+
         </div>
-        <h4>50M Water Resistant</h4>
-        <p>Built for everyday adventures. Splash-proof and rain-resistant</p>
+
+        <h4>
+          50M Water Resistant
+        </h4>
+
+        <p>
+          Built for everyday adventures. Splash-proof and rain-resistant
+        </p>
+
       </div>
+
+
+      <!-- FEATURE 4 -->
+
       <div class="feature-card">
+
         <div class="feature-icon-wrap">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
+
+          <svg
+            width="40"
+            height="40"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <rect
+              x="2"
+              y="7"
+              width="20"
+              height="14"
+              rx="2"
+            />
+            <path
+              d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"
+            />
+          </svg>
+
         </div>
-        <h4>Premium Packaging</h4>
-        <p>Each watch arrives in a luxury gift box, perfect for gifting</p>
+
+        <h4>
+          Premium Packaging
+        </h4>
+
+        <p>
+          Each watch arrives in a luxury gift box, perfect for gifting
+        </p>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- ==================== COLLECTION ==================== -->
 
   <section class="collection" id="collection">
+
     <div class="section-header">
-      <span class="section-label">Our Collection</span>
-      <h2>The Aeterna Collection</h2>
-      <p>8 distinctive timepieces, each priced between $70-$80</p>
+
+      <span class="section-label">
+        Our Collection
+      </span>
+
+      <h2>
+        The Aeterna Collection
+      </h2>
+
+      <p>
+        8 distinctive timepieces, each priced between $70-$80
+      </p>
+
     </div>
+
+
     <div class="watch-grid">
 
-      <div class="watch-card" data-watch="1">
-        <div class="watch-badge">Bestseller</div>
+
+      <!-- WATCH 1 -->
+
+      <div
+        class="watch-card"
+        data-watch="1"
+      >
+
+        <div class="watch-badge">
+          Bestseller
+        </div>
+
         <div class="watch-image-wrap">
-          <img src="images/watch1.png" alt="Aeterna Commander Two-Tone" loading="lazy">
+
+          <img
+            src="images/watch1.png"
+            alt="Aeterna Commander Two-Tone"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Commander Two-Tone')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Commander Two-Tone', 75)">Quick Buy — $75</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Commander Two-Tone')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Commander Two-Tone', 75)"
+            >
+              Quick Buy — $75
+            </button>
+
           </div>
+
         </div>
-        
+
+
         <div class="watch-info">
-          <h3>Commander Two-Tone</h3>
-          <p class="watch-desc">Stainless steel with gold accents. Day-date display. Classic elegance for the modern leader.</p>
+
+          <h3>
+            Commander Two-Tone
+          </h3>
+
+          <p class="watch-desc">
+            Stainless steel with gold accents.
+            Day-date display.
+            Classic elegance for the modern leader.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$75</span>
-            <span class="watch-rrp">$120</span>
-            <span class="watch-tag">Steel & Gold</span>
+
+            <span class="watch-price">
+              $75
+            </span>
+
+            <span class="watch-rrp">
+              $120
+            </span>
+
+            <span class="watch-tag">
+              Steel & Gold
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="2">
-        
+
+      <!-- WATCH 2 -->
+
+      <div
+        class="watch-card"
+        data-watch="2"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch2.png" alt="Aeterna Roman Classic" loading="lazy">
+
+          <img
+            src="images/watch2.png"
+            alt="Aeterna Classic Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Roman Classic')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Roman Classic', 72)">Quick Buy — $72</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Classic Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Classic Watch', 72)"
+            >
+              Quick Buy — $72
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Roman Classic</h3>
-          <p class="watch-desc">Black leather strap with Roman numerals. Timeless sophistication for formal occasions.</p>
+
+          <h3>
+            Classic
+          </h3>
+
+          <p class="watch-desc">
+            Refined everyday styling with a timeless premium finish.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$72</span>
-            <span class="watch-rrp">$110</span>
-            <span class="watch-tag">Leather</span>
+
+            <span class="watch-price">
+              $72
+            </span>
+
+            <span class="watch-rrp">
+              $115
+            </span>
+
+            <span class="watch-tag">
+              Classic
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="3">
-        <div class="watch-badge">Hot</div>
+
+      <!-- WATCH 3 -->
+
+      <div
+        class="watch-card"
+        data-watch="3"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch3.png" alt="Aeterna Gold Minimalist" loading="lazy">
+
+          <img
+            src="images/watch3.png"
+            alt="Aeterna Executive Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Gold Minimalist')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Gold Minimalist', 78)">Quick Buy — $78</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Executive Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Executive Watch', 78)"
+            >
+              Quick Buy — $78
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Gold Minimalist</h3>
-          <p class="watch-desc">All-gold stainless steel with clean dial. Bold, confident, and unapologetically luxurious.</p>
+
+          <h3>
+            Executive
+          </h3>
+
+          <p class="watch-desc">
+            Sophisticated styling designed for business and formal occasions.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$78</span>
-            <span class="watch-rrp">$130</span>
-            <span class="watch-tag">All Gold</span>
+
+            <span class="watch-price">
+              $78
+            </span>
+
+            <span class="watch-rrp">
+              $125
+            </span>
+
+            <span class="watch-tag">
+              Executive
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="4">
-        
+
+      <!-- WATCH 4 -->
+
+      <div
+        class="watch-card"
+        data-watch="4"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch4.png" alt="Aeterna Silver Elegance" loading="lazy">
+
+          <img
+            src="images/watch4.png"
+            alt="Aeterna Sport Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Silver Elegance')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Silver Elegance', 70)">Quick Buy — $70</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Sport Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Sport Watch', 76)"
+            >
+              Quick Buy — $76
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Silver Elegance</h3>
-          <p class="watch-desc">Two-tone silver and gold with date window. Versatile style from boardroom to dinner.</p>
+
+          <h3>
+            Sport
+          </h3>
+
+          <p class="watch-desc">
+            A bold and versatile design for active everyday wear.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$70</span>
-            <span class="watch-rrp">$105</span>
-            <span class="watch-tag">Two-Tone</span>
+
+            <span class="watch-price">
+              $76
+            </span>
+
+            <span class="watch-rrp">
+              $118
+            </span>
+
+            <span class="watch-tag">
+              Sport
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="5">
-        <div class="watch-badge">New</div>
+
+      <!-- WATCH 5 -->
+
+      <div
+        class="watch-card"
+        data-watch="5"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch5.png" alt="Aeterna Sport Chrono" loading="lazy">
+
+          <img
+            src="images/watch5.png"
+            alt="Aeterna Heritage Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Sport Chrono')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Sport Chrono', 76)">Quick Buy — $76</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Heritage Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Heritage Watch', 74)"
+            >
+              Quick Buy — $74
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Sport Chrono</h3>
-          <p class="watch-desc">Chronograph functionality with brown leather. For the man who values precision and sport.</p>
+
+          <h3>
+            Heritage
+          </h3>
+
+          <p class="watch-desc">
+            Traditional watchmaking character with modern refinement.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$76</span>
-            <span class="watch-rrp">$125</span>
-            <span class="watch-tag">Chronograph</span>
+
+            <span class="watch-price">
+              $74
+            </span>
+
+            <span class="watch-rrp">
+              $120
+            </span>
+
+            <span class="watch-tag">
+              Heritage
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="6">
-        
+
+      <!-- WATCH 6 -->
+
+      <div
+        class="watch-card"
+        data-watch="6"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch6.png" alt="Aeterna Executive Silver" loading="lazy">
+
+          <img
+            src="images/watch6.png"
+            alt="Aeterna Noir Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Executive Silver')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Executive Silver', 74)">Quick Buy — $74</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Noir Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Noir Watch', 79)"
+            >
+              Quick Buy — $79
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Executive Silver</h3>
-          <p class="watch-desc">Multi-dial chronograph with black leather strap. The ultimate executive statement piece.</p>
+
+          <h3>
+            Noir
+          </h3>
+
+          <p class="watch-desc">
+            Deep, understated styling for a sleek modern appearance.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$74</span>
-            <span class="watch-rrp">$115</span>
-            <span class="watch-tag">Multi-Dial</span>
+
+            <span class="watch-price">
+              $79
+            </span>
+
+            <span class="watch-rrp">
+              $130
+            </span>
+
+            <span class="watch-tag">
+              Noir
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="7">
-        <div class="watch-badge">Limited</div>
+
+      <!-- WATCH 7 -->
+
+      <div
+        class="watch-card"
+        data-watch="7"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch7.png" alt="Aeterna Deep Blue Diver" loading="lazy">
+
+          <img
+            src="images/watch7.png"
+            alt="Aeterna Modern Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Deep Blue Diver')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Deep Blue Diver', 80)">Quick Buy — $80</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Modern Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Modern Watch', 73)"
+            >
+              Quick Buy — $73
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Deep Blue Diver</h3>
-          <p class="watch-desc">Navy blue dial with black PVD coating. Bold color for the adventurous spirit.</p>
+
+          <h3>
+            Modern
+          </h3>
+
+          <p class="watch-desc">
+            Contemporary proportions and clean lines for everyday style.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$80</span>
-            <span class="watch-rrp">$135</span>
-            <span class="watch-tag">Diver Style</span>
+
+            <span class="watch-price">
+              $73
+            </span>
+
+            <span class="watch-rrp">
+              $115
+            </span>
+
+            <span class="watch-tag">
+              Modern
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
-      <div class="watch-card" data-watch="8">
-        
+
+      <!-- WATCH 8 -->
+
+      <div
+        class="watch-card"
+        data-watch="8"
+      >
+
         <div class="watch-image-wrap">
-          <img src="images/watch8.png" alt="Aeterna Midnight Chrono" loading="lazy">
+
+          <img
+            src="images/watch8.png"
+            alt="Aeterna Signature Watch"
+            loading="lazy"
+          >
+
           <div class="watch-overlay">
-            <button class="overlay-btn" onclick="askAboutWatch('Aeterna Midnight Chrono')">Ask AI</button>
-            <button class="overlay-btn secondary" onclick="quickBuy('Aeterna Midnight Chrono', 73)">Quick Buy — $73</button>
+
+            <button
+              class="overlay-btn"
+              onclick="askAboutWatch('Aeterna Signature Watch')"
+            >
+              Ask AI
+            </button>
+
+            <button
+              class="overlay-btn secondary"
+              onclick="quickBuy('Aeterna Signature Watch', 80)"
+            >
+              Quick Buy — $80
+            </button>
+
           </div>
+
         </div>
+
         <div class="watch-info">
-          <h3>Midnight Chrono</h3>
-          <p class="watch-desc">Black dial with red accents and triple chronograph. Edgy, modern, and unmistakably cool.</p>
+
+          <h3>
+            Signature
+          </h3>
+
+          <p class="watch-desc">
+            A distinctive statement piece created for the discerning wearer.
+          </p>
+
           <div class="watch-meta">
-            <span class="watch-price">$73</span>
-            <span class="watch-rrp">$118</span>
-            <span class="watch-tag">Sport</span>
+
+            <span class="watch-price">
+              $80
+            </span>
+
+            <span class="watch-rrp">
+              $135
+            </span>
+
+            <span class="watch-tag">
+              Signature
+            </span>
+
           </div>
+
         </div>
+
       </div>
 
     </div>
+
   </section>
+
+
+  <!-- ==================== ABOUT ==================== -->
 
   <section class="about" id="about">
-    <div class="about-visual">
-      <img src="images/watch1.png" alt="Aeterna Craftsmanship" class="about-img">
-      <div class="about-img-glow"></div>
+
+    <div class="section-header">
+
+      <span class="section-label">
+        About Aeterna
+      </span>
+
+      <h2>
+        Time, Refined.
+      </h2>
+
+      <p>
+        Aeterna brings together timeless watchmaking aesthetics,
+        precision engineering and contemporary luxury.
+      </p>
+
     </div>
-    <div class="about-content">
-      <span class="section-label">Our Story</span>
-      <h2>Precision in Every Tick</h2>
-      <p>Aeterna was born from a simple belief: every man deserves a timepiece that reflects his ambition. We combine Japanese quartz precision with contemporary design, delivering luxury aesthetics at accessible prices.</p>
-      <p>From the boardroom to the weekend getaway, an Aeterna watch is your silent statement of intent.</p>
-      <div class="stats">
-        <div class="stat"><span class="stat-number" data-target="8">0</span><span class="stat-label">Unique Models</span></div>
-        <div class="stat"><span class="stat-number" data-target="50">0</span><span class="stat-label">Meters Water Resist</span></div>
-        <div class="stat"><span class="stat-number" data-target="99">0</span><span class="stat-label">% Satisfaction</span></div>
-      </div>
-    </div>
+
   </section>
 
-  <section class="testimonials">
-    <div class="section-header light">
-      <span class="section-label">Testimonials</span>
-      <h2>What Our Customers Say</h2>
-    </div>
-    <div class="testimonial-slider" id="testimonialSlider">
-      <div class="testimonial active">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The Commander Two-Tone exceeded my expectations. For $75, this looks like a $500 watch. The weight, the finish — impeccable."</p>
-        <div class="testimonial-author"><strong>Ahmed K.</strong><span>Lahore, Pakistan</span></div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"Bought the Gold Minimalist as a gift for my brother. He hasn't taken it off in 3 months. The quality is outstanding."</p>
-        <div class="testimonial-author"><strong>Faisal R.</strong><span>Karachi, Pakistan</span></div>
-      </div>
-      <div class="testimonial">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p>"The AI concierge helped me pick the perfect watch for my wedding. The Roman Classic was the ideal choice."</p>
-        <div class="testimonial-author"><strong>Usman T.</strong><span>Islamabad, Pakistan</span></div>
-      </div>
-    </div>
-    <div class="testimonial-dots" id="testimonialDots"></div>
-  </section>
+
+  <!-- ==================== CONTACT ==================== -->
 
   <section class="contact" id="contact">
-    <div class="contact-content">
-      <div class="contact-info">
-        <span class="section-label">Get in Touch</span>
-        <h2>Let's Talk Watches</h2>
-        <p>Have questions about our collection? Need help choosing the perfect timepiece? Our team is here to assist you.</p>
-        <div class="contact-methods">
-          <div class="contact-method">
-            <div class="contact-icon">&#9993;</div>
-            <div><strong>Email</strong><a href="mailto:Aeternapk.gmail.com">Aeternapk.gmail.com</a></div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-icon">&#9742;</div>
-            <div><strong>Phone</strong><span>+92 300 1234567</span></div>
-          </div>
-          <div class="contact-method">
-            <div class="contact-icon">&#128205;</div>
-            <div><strong>Location</strong><span>Lahore, Pakistan</span></div>
-          </div>
-        </div>
-      </div>
-      <form class="contact-form" id="contactForm" onsubmit="handleContact(event)">
-        <h3>Send us a Message</h3>
-        <div class="form-group"><input type="text" id="contactName" placeholder="Your Name" required></div>
-        <div class="form-group"><input type="email" id="contactEmail" placeholder="Your Email" required></div>
-        <div class="form-group">
-          <select id="contactSubject">
-            <option value="">Select Subject</option>
-            <option value="order">Order Inquiry</option>
-            <option value="product">Product Question</option>
-            <option value="warranty">Warranty & Returns</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div class="form-group"><textarea id="contactMessage" placeholder="Your Message" rows="4" required></textarea></div>
-        <button type="submit" class="form-submit">
-          <span>Send Message</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-        </button>
-      </form>
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Get In Touch
+      </span>
+
+      <h2>
+        Contact Aeterna
+      </h2>
+
+      <p>
+        Have a question about our collection? We'd love to hear from you.
+      </p>
+
     </div>
+
+
+    <form
+      class="contact-form"
+      id="contactForm"
+      onsubmit="handleContact(event)"
+    >
+
+      <div class="form-group">
+
+        <label for="contactName">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="contactName"
+          name="name"
+          placeholder="Your name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="contactEmail">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="contactEmail"
+          name="email"
+          placeholder="your@email.com"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="contactSubject">
+          Subject
+        </label>
+
+        <input
+          type="text"
+          id="contactSubject"
+          name="subject"
+          placeholder="How can we help?"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="contactMessage">
+          Message
+        </label>
+
+        <textarea
+          id="contactMessage"
+          name="message"
+          rows="6"
+          placeholder="Write your message..."
+          required
+        ></textarea>
+
+      </div>
+
+
+      <button
+        type="submit"
+        class="cta-button primary"
+      >
+        Send Message
+      </button>
+
+    </form>
+
   </section>
 
-  <footer>
-    <div class="footer-top">
-      <div class="footer-brand">
-        <span class="footer-brand-icon">&#9670;</span>
-        <div><strong>Aeterna</strong><span>Master Your Time</span></div>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4>Shop</h4>
-          <a href="#collection">All Watches</a>
-          <a href="#collection">Steel Collection</a>
-          <a href="#collection">Leather Collection</a>
-          <a href="#collection">Chronographs</a>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <a href="#contact">Contact Us</a>
-          <a href="#contact">Shipping Info</a>
-          <a href="#contact">Returns</a>
-          <a href="#contact">Warranty</a>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <a href="mailto:Aeternapk.gmail.com">Aeternapk.gmail.com</a>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">WhatsApp</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 Aeterna Watches. All rights reserved.</p>
-      <p class="footer-credit">Crafted with precision in Lahore, Pakistan</p>
-    </div>
-  </footer>
 
-  <div class="chat-widget" id="chatWidget">
-    <div class="chat-header">
-      <div class="chat-header-info">
-        <div class="chat-avatar">&#129302;</div>
-        <div><strong>Aeterna AI Concierge</strong><span class="chat-status">&#9679; Online</span></div>
-      </div>
-      <button class="chat-close" onclick="closeChat()">&times;</button>
-    </div>
-    <div class="chat-messages" id="chatMessages">
-      <div class="message bot">
-        <div class="message-bubble">
-          <strong>Welcome to Aeterna!</strong><br><br>
-          I'm your personal watch expert. Ask me anything — from style recommendations to details about any watch in our $70-$80 collection.
-        </div>
-      </div>
-    </div>
-    <div class="chat-suggestions" id="chatSuggestions">
-      <button onclick="sendQuick('Which watch is best for formal events?')">Best for formal?</button>
-      <button onclick="sendQuick('Tell me about the Deep Blue Diver')">Deep Blue Diver?</button>
-      <button onclick="sendQuick('What is the warranty policy?')">Warranty info?</button>
-    </div>
-    <div class="chat-input-area">
-      <select id="modelSelect" class="model-select" title="Choose AI Model">
-        <option value="gemini">&#129504; Gemini</option>
-        <option value="ollama">&#9889; Ollama</option>
-      </select>
-      <input type="text" id="chatInput" placeholder="Ask about watches..." onkeypress="handleKeyPress(event)">
-      <button onclick="sendMessage()" class="send-btn">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-      </button>
-    </div>
+  <!-- ==================== AI CHAT ==================== -->
+
+  <div
+    class="chat-toggle"
+    id="chatToggle"
+    onclick="openChat()"
+    aria-label="Open AI Concierge"
+  >
+    <span>AI</span>
   </div>
 
-  <button class="chat-toggle" id="chatToggle" onclick="openChat()">
-    <span class="chat-toggle-icon">&#128172;</span>
-    <span class="chat-toggle-pulse"></span>
-  </button>
 
-  <div class="toast" id="toast"><span id="toastMessage">Message sent!</span></div>
+  <div
+    class="chat-widget"
+    id="chatWidget"
+  >
+
+    <div class="chat-header">
+
+      <div>
+
+        <strong>
+          Aeterna AI Concierge
+        </strong>
+
+        <span>
+          Premium Watch Assistant
+        </span>
+
+      </div>
+
+      <button
+        onclick="closeChat()"
+        aria-label="Close chat"
+      >
+        &times;
+      </button>
+
+    </div>
+
+
+    <div
+      class="chat-messages"
+      id="chatMessages"
+    >
+
+      <div class="message bot">
+
+        <div class="message-bubble">
+          Welcome to Aeterna. I'm your AI watch concierge.
+          How can I help you choose the perfect timepiece?
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="chat-quick-actions">
+
+      <button onclick="sendQuick('Which watch is best for formal occasions?')">
+        Best for formal
+      </button>
+
+      <button onclick="sendQuick('Which watch is the best value?')">
+        Best value
+      </button>
+
+      <button onclick="sendQuick('Tell me about your collection.')">
+        Collection
+      </button>
+
+    </div>
+
+
+    <div class="chat-input-area">
+
+      <select
+        id="modelSelect"
+        aria-label="AI model"
+      >
+        <option value="gemini">
+          Gemini
+        </option>
+
+        <option value="openai">
+          OpenAI
+        </option>
+      </select>
+
+
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="Ask about watches..."
+        onkeypress="handleKeyPress(event)"
+      >
+
+
+      <button
+        onclick="sendMessage()"
+        aria-label="Send message"
+      >
+        &#10148;
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- ==================== TOAST ==================== -->
+
+  <div
+    class="toast"
+    id="toast"
+  >
+
+    <span id="toastMessage">
+      Done
+    </span>
+
+  </div>
+
+
+  <!-- ==================== FOOTER ==================== -->
+
+  <footer class="footer">
+
+    <div class="footer-brand">
+      <span class="nav-brand-icon">&#9670;</span>
+      Aeterna
+    </div>
+
+    <p>
+      Timeless Precision. Modern Elegance.
+    </p>
+
+    <p class="footer-copy">
+      &copy; 2024 Aeterna Watches. All rights reserved.
+    </p>
+
+  </footer>
+
+
+  <!-- ==================== SCRIPT ==================== -->
 
   <script src="script.js"></script>
+
 </body>
 </html>
