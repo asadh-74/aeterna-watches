@@ -68,8 +68,11 @@ async function callGroq(message) {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error('GROQ_API_KEY not configured');
 
+  // FIX: llama-3.3-70b-versatile was deprecated by Groq (shutdown 08/16/2026)
+  // and is Enterprise-only now. openai/gpt-oss-120b is the free/developer-tier
+  // replacement Groq recommends.
   const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
-    model: process.env.GROQ_MODEL || 'llama-3.3-70b-versatile',
+    model: process.env.GROQ_MODEL || 'openai/gpt-oss-120b',
     messages: [{ role: 'user', content: message }]
   }, {
     headers: {
