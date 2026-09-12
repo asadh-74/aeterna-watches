@@ -6,8 +6,7 @@ A luxury men's watch brand website with AI-powered concierge, real watch photos,
 
 ## 🚀 Live Demo
 
-- **Frontend**: [Deploy on Vercel](https://vercel.com/asad-projects1)
-- **Backend**: [Deploy on Render/Railway]
+- Deployed on : https://aeterna-watches12.vercel.app/
 - **GitHub**: [github.com/asadh-74](https://github.com/asadh-74)
 
 ---
