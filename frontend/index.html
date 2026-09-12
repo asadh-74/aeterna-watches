@@ -15,6 +15,21 @@
   >
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- FIX: force the AETERNA wordmark onto one line instead of wrapping "A" to a second row -->
+  <style>
+    .brand-name {
+      display: flex;
+      flex-wrap: nowrap;
+      white-space: nowrap;
+      font-size: clamp(2.2rem, 7vw, 5.5rem);
+      line-height: 1;
+    }
+    .brand-char {
+      display: inline-block;
+      white-space: nowrap;
+    }
+  </style>
 </head>
 
 <body>
@@ -1112,6 +1127,7 @@
 
     <div class="chat-input-area">
 
+      <!-- FIX: option value changed from "openai" to "groq" to match backend (/api/chat only accepts 'gemini' or 'groq') -->
       <select
         id="modelSelect"
         aria-label="AI model"
@@ -1120,8 +1136,8 @@
           Gemini
         </option>
 
-        <option value="openai">
-          OpenAI
+        <option value="groq">
+          Groq
         </option>
       </select>
 
