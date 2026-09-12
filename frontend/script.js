@@ -461,9 +461,11 @@ async function sendMessage() {
     const message =
         input.value.trim();
 
+    // Normalize the dropdown's value so "Gemini"/"Groq"/stray spaces
+    // still match the backend's exact 'gemini' / 'groq' checks.
     const model =
         modelSelect
-            ? modelSelect.value
+            ? modelSelect.value.trim().toLowerCase()
             : "gemini";
 
     if (!message) return;
