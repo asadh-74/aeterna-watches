@@ -49,7 +49,10 @@ async function callGemini(message) {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error('GEMINI_API_KEY not configured');
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
+  // FIX: gemini-2.0-flash does not exist on this key's project (confirmed via
+  // GET /v1beta/models) and returned a 404. gemini-2.5-flash is the current
+  // stable flash model.
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`;
 
   const response = await axios.post(url, {
     contents: [{ parts: [{ text: message }] }]
