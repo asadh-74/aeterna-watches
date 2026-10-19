@@ -111,3 +111,8 @@ Frontend → Backend (/api/chat) → Gemini/Ollama API
 ---
 
 Built with precision. ⏱️
+
+## Product & inventory sync workspace
+Open the backend `/inventory` page. Edit a product's name, price, stock or active flag, then sync to local storefront and warehouse replicas. The published catalog is available at `/api/inventory/catalog` in the same browser session.
+The optional warehouse failure scenario deliberately injects a first-attempt timeout. Retry after a one-second backoff; successful jobs do not apply twice, and a stale retry is marked superseded instead of overwriting a newer source version. Operation IDs provide idempotency and expectedVersion rejects concurrent edits. No Shopify/WooCommerce or other external account is connected.
+Browser-scoped JSON sandbox data expires after 24 hours and resets on ephemeral-hosting restarts. Use fictional data. Run `node --test inventory.test.js` from `backend` for validation, idempotency, failure recovery and version-conflict checks.
